@@ -1,2 +1,2 @@
-# my_kaggle_works
-I uploaded the works which I did on Kaggle datasets and my own prepared notes regarding Data Science. 
+# my Data Science Notes
+I did this notes with the reference attachment, so beginers can easily understood.
