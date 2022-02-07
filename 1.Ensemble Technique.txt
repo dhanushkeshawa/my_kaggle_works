@@ -1,0 +1,191 @@
+								 Ensemble Learning:-
+
+ 								 Ensemble Learning
+									 :
+									 :
+		:--------------------------------------------------------:---------------------------------------------------------:
+		:							 :   							   :	    
+		:							 :							   :	    
+             Bagging						      Boosting							Stacking 		 
+    (Bootstamp Assembly Method)	
+         1)Random Forest					1)AdaBoost (Adaptive Boosting)		
+								2)Gradient boosting
+								3)XGBoost
+
+Ensemble Learning:-
+Ensemble methods is a machine learning technique that combines several base models(Machine Learning Models) in order to produce one optimal predictive model.In order to increase to efficiency of our Machine Learning problem.
+
+Example to understand easily:-
+Suppose in Stacking Ensembling technique, we make a stacking model with 2 Algorithms consider, 1st is KNN & 2nd is SVM. First we fit the each model individualy suppose we get 80% of accuracy from both models. If we use stacking by applying linear_regression of KNN over SVM.Then we got 85% accuracy.Therefore compared to individual models we got 5% more  accuracy from Ensemble technique.
+
+Types of Ensemble Learning:-
+1)Bagging
+2)Boosting
+3)Stacking
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 								      Bagging:-
+Bootstrap Aggregating:-
+It is a combination of 2 definations, Bootstramp+Aggregation.
+
+
+                                	       (Bootstramp)						(Aggregation)
+              :<-------------------------------	------------------------------------>:<---------------------------------------------->:								     						      
+              	 (row sampling 1 with replacement)						     						      
+	       /-------	-------	-------	-------	-------	(Base_model 1)-(prediction 1)------------>\				      
+      	      /   (row sampling 2 with replacement)                                                                      	   				      
+	     /-	-------	-------	-------	-------	-------	(Base_model 2)-(Prediction 2)------------>  \                                             
+	    /	(row sampling 3 with replacement)										     				      
+(Data Sets)/--------------------------------------------(Base_model 3)-(Prediction 3)------------>    \ (Aggregated_o/p or Prediction)  
+           \	(row sampling 4 with replacement)										      
+	    \--	-------	-------	-------	-------	-------	(Base_model 4)-(Prediction 4)------------>   /
+             \   (row sampling n with replacement)               :                                          					    
+	      \	-------	-------	-------	-------	-------	(Base_model n)--(Prediction n)-----------> /
+
+
+
+
+1)Bootstramp:-
+	In general we work on the single model but in this case we choose multiple base_models, We make 2 or more Base_models for doing ensemble technique,in this case case, first we divide taotal datasets into many samples ramdomly with repalcements at each time, this is also called as "Row & Column Sampling with Replacement".And finaly each individual model perdicted  it's own predictions let say consider if we selected 10 branching of base_models we got 10 predictions, based on row sampling with replacement training method.Untill this first half of process is called Bootstramp. 
+
+2)Aggregation:-
+After bootstramping we got 10 model of prediction.in order to get single prediction, we may take Mean,Median or Maximum_voting.Based on ths aggregation techniques we got predicted output.
+
+3)Row or column Sampling with replacement:-
+It is a process of selecting small random datasets from whole datasets randomly for 1st model.And for selecting datasets for 2nd model it will also selecting datasets randomly but with replacement,means without selecting datasets which we already selected in model_1. 
+
+Important point is:-bagging is used for reducing variance.
+
+							1)Random Forest:-
+Random Forest is the application of bagging technique, here we use Decision Tree for base_models. 
+
+
+                                	       (Bootstramp)						(Aggregation)
+              :<-------------------------------	------------------------------------>:<---------------------------------------------->:								     						      
+              	 (row sampling 1 with replacement)						     						      
+	       /-------	-------	-------	-------	-------	(Decision Tree 1)-(prediction 1)------------>\				      
+      	      /   (row sampling 2 with replacement)                                                                      	   				      
+	     /-	-------	-------	-------	-------	-------	(Decision Tree 2)-(Prediction 2)------------>  \                                             
+	    /	(row sampling 3 with replacement)										     				      
+(Datasets) /--------------------------------------------(Decision Tree 3)-(Prediction 3)------------>    \ (Aggregated_o/p or Prediction)  
+           \	(row sampling 4 with replacement)										      
+	    \--	-------	-------	-------	-------	-------	(Decision Tree 4)-(Prediction 4)------------>   /
+             \   (row sampling n with replacement)               :                                          					    
+	      \	-------	-------	-------	-------	-------	(Decision Tree n)--(Prediction n)-----------> /
+
+Some exciting question regarging Random Forest,which makes readers fall in love with Random Forest.
+ 
+1)Why almost all Data Scientists use Random Forest?
+Ans:-
+Random Forest are not much more affected by high variance in datasets,Random Forest due to containing unprocessed data.it includes missing values,,ect
+
+2)How it performs with high efficiency even it contains high variance?
+Ans:-
+In ramdom forest we use Rrow sampling with replacement technique, which may divides datasets for feeding each branches of base_models.Suppose if datasets contains noise,and all noises are not fed to only one model, noises are divided within the datasets when Rrow sampling. So noises or variances will not affect the random forest.
+
+3)Is there any Data pre-processing is compulsory for using Random Forest?
+Ans:-
+Not much necessary when we using Random Forest, bcz of bagging Technique & Row sampling with replacement .
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+									Boosting:-
+Before going to boosting we need to know some basic concepts:-
+1)Gradient Desent:- 
+	Gradient descent is an iterative(process is repetitive untill final condition reached) first-order optimisation algorithm used to find a local minimum of a given function. This method is commonly used in machine learning (ML) and deep learning(DL) to minimise a cost/loss function. We can achieve this by using weights as slope/1st order derivative and  by using  learning rate as steps to reach the globa minima.
+
+*What is global minima?
+the smallest overall value of a set(in GD it is called as low cost value), function, etc., over its entire range.  
+ 
+*Why we mention 1st order here?
+By using Slope in the loss function we can reach global minima.Therefore in order to get slope we use 1st order derivative function.
+y=dy/dx 
+
+*What is Updated Weight in gradient  desent?
+We can't achieve global minima in one shot.We use the model with many layers multiple times, from each model gradient desent towards global minima achieve is slightly increased , therefore weights or slope are updated by every single model.
+
+*Learning Rate:-
+Before achieve global minima, our cost-function is at global maxima, in order to reach global minima through gradient decent ,we reach it by  slow by slow in the decent direction. Learning rate will gives the how far steps will take to reach global minima at every time.
+
+Important question:-
+1)For what purpose boosting technique is used?
+ans:- In order to reduce Bias we need to use boosting.bcz Bias is called as incorrect assumptions in the ML process to make the target function easier to approximate.Therefore we got difference in actual & predicted values called as Residual.So we consider only Residuals in boosting technique.
+
+										Boosting:-
+	It is a connection of specified numbers of models connected each others by one model_i/p with other model_o/p in the sequence, if one model predicted 5 errors which is fed to next model as i/p and gives only 2 number of errors.This process will continued untill all errors become zero. Boosting is an ensemble modeling technique that attempts to build a strong classifier from the number of weak classifiers. It is done by building a model by using weak models in series. Firstly, a model is built from the training data. Then the second model is built which tries to correct the errors present in the first model. This procedure is continued and models are added until either the complete training data set is predicted correctly or the maximum number of models are added. 
+
+
+Training        Error_1 from        Error_2 from         No Error
+Dataset         model_1 (5 error)   model_2(2 errors)    (0 errors)
+------>(model_1)-------->(model_2)--------->(model_3)----- -----(model_n)
+
+Types of boosting:-
+1)Adaboost
+2)Gradient boosting
+3)Xgboost
+
+  									
+1)Adaboost:-
+	AdaBoost was the first really successful boosting algorithm developed for the purpose of binary classification. AdaBoost is short for Adaptive Boosting and is a very popular boosting technique that combines multiple “weak classifiers” into a single “strong classifier”. 
+
+Algorithm: 
+1)Initialise the dataset and assign equal weight(slope) to each of the data point.
+2)Provide this as input to the model_1 and identify the wrongly classified data points or errors from model_1.
+3)Increase the weight(update) of the wrongly classified data points.
+4)And feed this updated weight as i/p to  model_2 and again identify the wrongly classified data points from model_2
+5)Again increase the weight(update) of the wrongly classified data points.
+6)Continue this iteration untill we get No_wrongly_classified data points upto model_n.
+
+Explanation:-
+"https://media.geeksforgeeks.org/wp-content/uploads/20190324085500/adaboost.jpg"<---see this image
+The above diagram explains the AdaBoost algorithm in a very simple way. Let’s try to understand it in a stepwise process: 
+
+*)B1 consists of 10 data points which consist of two types namely plus(+) and minus(-) and 5 of which are plus(+) and the other 5 are minus(-) and each one has been assigned equal weight initially. The first model tries to classify the data points and generates a vertical separator line but it wrongly classifies 3 plus(+) as minus(-).
+*)B2 consists of the 10 data points from the previous model in which the 3 wrongly classified plus(+) are weighted more so that the current model tries more to classify these pluses(+) correctly. This model generates a vertical separator line that correctly classifies the previously wrongly classified pluses(+) but in this attempt, it wrongly classifies three minuses(-).
+*)B3 consists of the 10 data points from the previous model in which the 3 wrongly classified minus(-) are weighted more so that the current model tries more to classify these minuses(-) correctly. This model generates a horizontal separator line that correctly classifies the previously wrongly classified minuses(-).
+*)B4 combines together B1, B2, and B3 in order to build a strong prediction model which is much better than any individual model used.
+refer this"https://www.geeksforgeeks.org/boosting-in-machine-learning-boosting-and-adaboost/"
+
+2)Gradient boosting:-
+	Gradient Boosting is a popular boosting algorithm. In gradient boosting, each predictor corrects its predecessor’s error. In contrast to Adaboost, the weights of the training instances are not tweaked, instead, each predictor is trained using the residual errors(y'-y)/(actual_o/p - predicted_o/p) of predecessor as labels.
+There is a technique called the Gradient Boosted Trees whose base learner is CART (Classification and Regression Trees).
+The below diagram explains how gradient boosted trees are trained for regression problems.
+"https://media.geeksforgeeks.org/wp-content/uploads/20200721214745/gradientboosting.PNG"
+
+The ensemble consists of N trees. Tree1 is trained using the feature matrix X and the labels y. The predictions labelled y1(hat) are used to determine the training set residual errors r1. Tree2 is then trained using the feature matrix X and the residual errors r1 of Tree1 as labels. The predicted results r1(hat) are then used to determine the residual r2. The process is repeated until all the N trees forming the ensemble are trained.
+
+There is an important parameter used in this technique known as Shrinkage.
+
+Shrinkage refers to the fact that the prediction of each tree in the ensemble is shrunk after it is multiplied by the "learning rate (eta)" which ranges between 0 to 1. There is a trade-off between eta and number of estimators, decreasing learning rate needs to be compensated with increasing estimators in order to reach certain model performance. Since all trees are trained now, predictions can be made.
+Each tree predicts a label and final prediction is given by the formula,
+
+y(pred) = y1 + (eta *  r1) + (eta * r2) + ....... + (eta * rN)
+
+The class of the gradient boosting regression in scikit-learn is "GradientBoostingRegressor". A similar algorithm is used for classification known as GradientBoostingClassifier.
+ refer this "https://www.geeksforgeeks.org/ml-gradient-boosting/"
+
+3)XGBoost (e'x'treme Gradient Boosting):-
+	XGBoost is an implementation of Gradient Boosted decision trees.It has recently been dominating in applied machine learning.In this algorithm, decision trees are created in sequential form. Weights play an important role in XGBoost. Weights are assigned to all the independent variables which are then fed into the decision tree which predicts results. Weight of variables predicted wrong by the tree is increased and these the variables are then fed to the second decision tree. These individual classifiers/predictors then ensemble to give a strong and more precise model. It can work on regression, classification, ranking, and user-defined prediction problems. "https://media.geeksforgeeks.org/wp-content/uploads/20190812224752/finclassifier.png"<----see this image for understanding
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								Stacking:-
+As compared to bagging & boosting we use multiple similar models i,e,,only Desision Tree as base_models, but in the case of stacking we can able to use multiple classifications models or regression models.
+ So, you can build multiple different learners and you use them to build an intermediate prediction, one prediction for each learned model. Then you add a new model which learns from the intermediate predictions the same target.
+This final model is said to be stacked on the top of the others, hence the name. Thus, you might improve your overall performance, and often you end up with a model which is better than any individual intermediate model. 
+
+Example:-
+Suppose in Stacking Ensembling technique, we make a stacking model with 2 Algorithms consider, 1st is KNN & 2nd is SVM. First we fit the each model individualy suppose we get 80% of accuracy from both models. If we use stacking by applying linear_regression of KNN over SVM.Then we got 85% accuracy.Therefore compared to individual models we got 5% more  accuracy from Ensemble technique.
+	
+
+  
+
+
+
+
+
+
+
+
+ 
+
+
+					
