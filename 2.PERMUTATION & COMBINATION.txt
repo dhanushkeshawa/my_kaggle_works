@@ -1,0 +1,46 @@
+                                                       Permutation & Combination:-
+
+Permutation:-
+A permutation, also called an "arrangement number" or "order," is a rearrangement of the elements of an ordered list into a one-to-one correspondence with itself.
+A permutation is an arrangement of objects in a definite order. The members or elements of sets are arranged here in a sequence or linear order.
+For example:-							  
+The permutation of set A={1,2,3,4,5} is 120, bcz consider (posibility of 5 person's are sit on 5 chairs) :-Ex {12345},{21345},{32145},,,,,,,,,,,
+
+									5,4,3,2,1	
+									-,-,-,-,-  (Here 5/1 is posible of 5 members are sit in 1st chair,)
+									1,2,3,4,5	 4/2 is posible of remaining 4 members are sit in 2nd chair,
+											 3/3 is posible of remaining 3 members are sit in 3rd chair,
+											 2/4 is posible of remaining 2 members are sit in 4th chair
+											 1/5 is posible of remaining 1 members are sit in 5th chair.)
+
+							Therefore probability of 5 person sit on 5 chairs is 5*4*3*2*1=5!=n!=120 posible chance 
+
+What if we need to find posibility of selected chairs ,consider 5 person posibity of sitting on 3 chairs,i,e,,5p3
+
+  									5,4,3
+									-,-,-  (Here 5/1 is posible of 5 members are sit in 1st chair,)
+									1,2,3 	     4/2 is posible of remaining 4 members are sit in 2nd chair,
+										     3/3 is posible of remaining 3 members are sit in 3rd chair)
+										
+		               Therefore probability of 5 person sit on 3 chairs is 5*4*3 ,So this can be written as (5*4*3*2*1)/(2*1) = 5*4*3 =60 posible arrangements
+
+Therefore from above example we can write the formula for permutation,i,e,,5*4*3*2*1)/(2*1)=n!/(n-r)!, here (n-r)! used for cancelation of (2*1) in the selected permutation.bcz of this we called permutation is an "arrangement number" or "order" based.{123},{213},{321},,,,,{345},{453},,,,,,,,,60 permutations
+
+
+Combinations:-
+	A combination is a mathematical technique that determines the number of possible arrangements in a collection of items where the order of the selection does not matter.
+Order of selection does't matter means,in {123},{213},{321} we have many orders of {123} ,but in combination it will consider only {123} not that orders.form above  example we had 3 peoples are arranged in each combination.Therefore there are 3*2*1=6 posible ways to arrange people (123,132,213,231,321,312)--->(123)
+
+Therefore it will create only the possibe combination occures without it's order i,e,,5*4*3/3!=120/6=20 combination will accure.
+Formula=permutation/No of items selected.=n!/(n-r)!*r!
+
+Application of permutation & combination:-
+1)A permutation is used for the list of data (where the order of the data matters) and 
+*the combination is used for a group of data (where the order of data doesn't matter).
+
+
+
+
+
+
+											 
