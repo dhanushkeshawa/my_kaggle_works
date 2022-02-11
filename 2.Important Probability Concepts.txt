@@ -1,0 +1,307 @@
+								Probability and Likelihood:-
+						    prior probabilities and posterior probabilities:-
+					  Conditional Probability vs. Joint Probability and Marginal Probability:-
+								What Is Compound Probability:-
+									Bayes' Theorem:-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Important assending_wise steps of Probability:-
+1)Impossible:-
+	If an event is never going to happen then you can describe the probability as impossible. For example, the probability of rolling a 7 on an ordinary dice would be impossible.bcz it has only 6 faces.
+
+2)Uncertinity:-
+	uncertainty, doubt, dubiety, skepticism, suspicion, mistrust mean lack of sureness about someone or something. uncertainty may range from a falling short of certainty to an almost complete lack of conviction or knowledge especially about an outcome or result.For example, if it is unknown whether or not it will rain tomorrow.It is higher than Imposible.
+
+2)Unlikely:-
+	If an event has a small chance of happening then you can use the word unlikely to describe the probability. For example, the probability that the next car that will drive past your house will be green would be described as unlikely (since green cars are unpopular).bcz there is less chance of occurency.It is higher than Uncertinity.
+
+3)Even:-
+	If an event has a fifty-fifty chance of happening then you can use the word even chance to describe the probability. For example, the probability that the next baby born will be a boy would be described as even chance.bcz there is a 50% chance of boy or 50% chance of girl.It is higher than Unlikely.
+
+4)Likely:-
+	If an event has a good chance of happening then you can use the word likely to describe the probability. For example, the probability of picking a number card from a deck of cards would be described as likely.Bcz there is more chance of occurence.It is higher than Even.
+
+5)Certinity:-
+	Finally, if an event is definitely going to happen then the probability will be described as certain to happen. For example, the probability of rolling any number from 1 to 6 on an ordinary dice would be described as certain to happen.which means we were sure about the predicates.It is higher than.
+
+
+      :--------------------:----------------------:-----------------------:---------------------------:------------------:  
+      :			   :			  :			  :			      :			 :
+      :			   :			  :			  :			      :			 :
+ Imposible(1st)      Uncertinity(2nd)         Unlikely(3rd)             Even(4th)	            Likely(5th)      Certinity(6th)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Basically probability is divided:-
+1)Subjective Probability:-
+	Subjective probability refers to a probability that is based on experience or personal judgment.There is no calculation behind it. 
+For example, if the analyst believes that “there is an 80% probability that the S&P 500(Stock Market) will hit all-time highs in the next month,” he is using subjective probability.
+
+2)Objective probability:-
+	Objective probability refers to the chances or the odds that an event will occur "based on the analysis" of concrete measures rather than hunches or guesswork(unlike Subjective probability).The probability estimate is computed using mathematical equations that manipulate the data to determine the likelihood of an independent event occurring.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							Objective Probability:-
+Objective Probability is basically classifiied into two types:-
+
+1)Priori Probability:-
+
+	 Priori Probability also known as classical probability, is a probability that is deduced from formal reasoning. In other words, a priori probability is derived from logically examining an event. A priori probability does not vary from person to person (as would a subjective probability, means it can't be judged it should be calculated) and is an objective probability.
+
+	Formula for A Priori Probability
+	Priori Probability=f/N ,where  f refers to the number of desirable outcomes.
+					N refers to the total number of outcomes.
+
+*)formal reasoning:- 
+	Probabilistic reasoning is a way of knowledge representation where we apply the concept of probability.
+
+*)Example of Formal Reasoning in A Priori Probability
+	A priori probability requires formal reasoning. For example, consider a coin toss. What is the a priori probability of a head in a single coin toss?<--This is the formal reasoning.
+
+							Examples of A Priori Probability:
+
+	1)Example 1: Fair Dice Roll
+A six-sided fair dice is rolled. What is the a priori probability of rolling a 2, 4, or 6, in a dice roll?
+The number of desired outcomes is 3 (rolling a 2, 4, or 6), and there are 6 outcomes in total. The a priori probability for this example is calculated as follows:
+A priori probability=f/N = 3 / 6 = 50%. Therefore, the a priori probability of rolling a 2, 4, or 6 is 50%.
+
+	2)Example 2: Deck of Cards
+In a standard deck of cards, what is the a priori probability of drawing an ace of spades?
+The number of desired outcomes is 1 (an ace of spades), and there are 52 outcomes in total. The a priori probability for this example is calculated as follows:
+A priori probability = 1 / 52 = 1.92%. Therefore, the a priori probability of drawing the ace of spades is 1.92%.
+
+	3)Example 3: Coin Toss
+John is looking to determine the a priori probability of landing a head. He conducts a single coin toss, shown below:
+Experiment 1
+Result: Head
+What is the a priori probability of landing a head?
+The above is a trick example – the prior coin toss has no impact on the a priori probability of landing a head. The a priori probability of landing a head is calculated as follows:
+A priori probability = 1 / 2 = 50%. Therefore, the a priori probability of landing a head is 50%.-------------------------------------------------------------------
+
+2)Posterior Probability:-
+
+	*A posterior probability, in Bayesian statistics, is the revised or updated probability of an event occurring after taking into consideration new information. 	*The posterior probability is calculated by updating the prior probability using Bayes' theorem. 
+	*In statistical terms, the posterior probability is the probability of event A occurring given that event B has occurred(means finding probability of Event A 	  with respect to already existed probability of Event B). 
+ 
+      Posterior probability ∝ Priori x Likelihood
+
+Example of Posterior probability with respect to priori probability & Likelihood:-
+	For example:-
+*Priori probability:-f/N
+	let there be two urns, urn A having 5 black balls and 10 red balls and urn B having 10 black balls and 5 red balls. Now if an urn is selected at random, the probability that urn A is chosen is 0.5. This is the a priori probability. 
+*Posterior probability:-Additional information to priori
+	We are given an additional piece of information that a ball was drawn at random from the selected urn, and that ball was black, what is the probability that the chosen urn is urn A?
+	Posterior probability takes into account this additional information and revises the probability downward from 0.5 to 0.333 according to Bayes´ theorem, because a black ball is more probable from urn B than urn A(urnA had 5 black ball & urnB had 10 black ball).
+
+						Bayes' Theorem Formula for posterior Probability:-
+
+The formula to calculate a posterior probability of A occurring given that B occurred:
+
+P(A∣B)=P(A∩B)/P(B) = P(A)×P(B∣A)/P(B)
+Imp point:-
+P(A∩B)=P(A)×P(B∣A), here P(A) is a Priori Probability, but
+		       P(B) is a Posterior Probability, So we writ it as P(B|A) or P(Posterior|Priori),means The probability of B occurring given that A is true
+		       Therefore we write P(A∩B)=P(A)×P(B∣A) instead of P(A∩B)=P(A)xP(B)		
+where:-
+	A,B=Events
+	P(B∣A)=The probability of B occurring given that A is true(means A is Known or priori)
+	P(A) and P(B)=The probabilities of A occurring and B occurring independently of each other.
+The posterior probability is thus the resulting distribution, P(A|B).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Probabilistic reasoning:-It is the main concept.
+	Probabilistic reasoning is a way of knowledge representation, where we apply the concept of probability, to indicate the uncertainty in knowledge. In probabilistic reasoning, we combine probability theory with logic to handle the uncertainty.
+	We use probability in probabilistic reasoning because it provides a way to handle the uncertainty that is the result of someone's laziness and ignorance.
+	In simple word Probabilistic reasoning is using logic and probability to handle uncertain situations. 
+	Example:- of probabilistic reasoning is using past situations and statistics to predict an outcome.
+Example;-
+	In the real world, there are lots of scenarios, where the certainty of something is not confirmed, such as "It will rain today," "behavior of someone for some situations," "A match between two teams or two players." These are probable sentences for which we can assume that it will happen but not sure about it, so here we use probabilistic reasoning.
+	In probabilistic reasoning, there are two ways to solve problems with uncertain knowledge:
+		1)Bayes' rule
+		2)Bayesian Statistics
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------									Probability:-
+
+ 	Probability can be defined as a chance that an uncertain event will occur. It is the numerical measure of the likelihood that an event will occur. The value of probability always remains between 0 and 1 that represent ideal uncertainties.
+
+	0 ≤ P(A) ≤ 1,   where P(A) is the probability of an event A.  
+	P(A) = 0,  indicates total uncertainty in an event A.   
+	P(A) =1, indicates total certainty in an event A.
+    
+We can find the probability of an uncertain event by using the below formula.
+
+Probability of occurrence= Number of desired outcome / Total number of outcome
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								Some Common terminologies in Probability:-
+1)Event: Each possible outcome of a variable is called an event.
+2)Sample space: The collection of all possible events is called sample space.
+3)Random variables: Random variables are used to represent the events and objects in the real world.
+4)Prior probability: The prior probability of an event is probability computed before observing new information.(above is completely explained)
+5)Posterior Probability: The probability that is calculated after all evidence or information has taken into account. It is a combination of prior probability and new information.(above is completely explained)
+6)Joint probability:-It calculates the likelihood of two events occurring together and at the same point in time. Joint probability is the probability of event Y occurring at the same time that event X occurs.
+7)Marginal probability:- the probability of an event irrespective of the outcome of another variable.
+8)Conditional probability:- probability of one event occurring in the presence of a second event.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+									Conditional probability:-
+    Conditional probability is a probability of occurring an event when another event has already happened.
+   	Let's suppose, we want to calculate the event A when event B has already occurred, "the probability of A under the conditions of B", it can be written as:
+	P(A|B)=P(A∩B)/P(B)
+	Where,
+	     P(A∩B)= Joint probability of A and B
+	     P(B)= Marginal probability of B.
+
+	If the probability of A is given and we need to find the probability of B, then it will be given as:
+	     P(B|A)=P(A∩B)/P(A)
+
+Example:-
+	In a class, there are 70% of the students who like English and 40% of the students who likes English and mathematics, and then what is the percent of students those who like English also like mathematics?
+Solution:-
+Let, A is an event that a student likes Mathematics
+     B is an event that a student likes English.
+
+     P(A|B)=P(A∩B)/P(B) = 0.4/0.7 = 57%
+Hence, 57% are the students who like English also like Mathematics.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								Bayes' theorem :-vvvvimp
+	Bayes' theorem is also known as Bayes' rule, Bayes' law, or Bayesian reasoning, which determines the probability of an event with uncertain knowledge.
+In probability theory, it relates the conditional probability and marginal probabilities of two random events.
+It is a way to calculate the value of P(B|A) with the knowledge of P(A|B).
+ Where,
+	P(A|B):-Probability of hypothesis A on the observed event B.(Here A is an Hypothesis bcz of uncertinity or we are not sure about it's occurrence, we don't know hypothesis is true or not)								(B is an Certininty we are Sure about it's occurrence)
+	P(B|A):-Probability of the evidence B given that the probability of a hypothesis A is true(bcz by using baye's theorem denominator should be certinity ,Therefore A is already hypothesis,means it's already in uncertinity,so in order to make it certininty we make hypothesis is true,means Null_hypothesis is true.'.it is certinity)
+
+*Bayes' theorem allows updating the probability prediction of an event by observing new information of the real world.
+
+Example: If cancer corresponds to one's age then by using Bayes' theorem, we can determine the probability of cancer more accurately with the help of age.
+Bayes' theorem can be derived using product rule and conditional probability of event A with known event B:
+
+As from product rule we can write:
+
+	P(A ⋀ B)= P(A|B) P(B) or P(A)xP(B) but P(A) it's an hypothesis,means uncertine so we need to make certine by making P(A)=P(A|B)
+ 
+Similarly, the probability of event B with known event A:
+
+	P(A ⋀ B)= P(B|A) P(A)  
+
+Equating right hand side of both the equations, we will get:
+
+The formula for Bayes' theorem is given as:-
+
+	P(A|B)=P(B|A)*P(A)/P(B)-------->(a)
+
+The above equation (a) is called as Bayes' rule or Bayes' theorem. This equation is basic of most modern AI systems for probabilistic inference.
+It shows the simple relationship between joint and conditional probabilities. 
+Here,
+P(A|B) is known as posterior, which we need to calculate, and it will be read as Probability of hypothesis A when we have occurred an evidence B.Here evidence means that it alread occured .'. we use this as evidence by calculating the hypothesis A.
+
+P(B|A) is called the likelihood, in which we consider that hypothesis is true, then we calculate the probability of evidence.
+
+P(A) is called the prior probability, probability of hypothesis before considering the evidence.
+
+P(B) is called marginal probability, pure probability of an evidence.
+
+								Applying Bayes' rule:-
+Bayes' rule allows us to compute the single term P(B|A) in terms of P(A|B), P(B), and P(A). This is very useful in cases where we have a good probability of these three terms and want to determine the fourth one. Suppose we want to perceive the effect of some unknown cause, and want to compute that cause, then the Bayes' rule becomes:
+Example-1:
+Question: what is the probability that a patient has diseases meningitis with a stiff neck?
+Given Data:
+A doctor is aware that disease meningitis causes a patient to have a stiff neck, and it occurs 80% of the time. He is also aware of some more facts, which are given as follows:
+The Known probability that a patient has meningitis disease is 1/30,000.
+The Known probability that a patient has a stiff neck is 2%.
+Let a be the proposition that patient has stiff neck and b be the proposition that patient has meningitis. , so we can calculate the following as:
+Solution:-
+	P(a|b) = 0.8
+	P(b) = 1/30000
+	P(a)= .02
+
+	P(B|A)=P(A|B)*P(B)/P(A) = 0.8*(1/30000)/0.02 = 1/750
+Hence, we can assume that 1 patient out of 750 patients has meningitis disease with a stiff neck.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							Naïve Bayes Classifier Algorithm:-
+*Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes theorem and used for solving classification problems.
+*It is mainly used in text classification that includes a high-dimensional training dataset.
+*It is a probabilistic classifier, which means it predicts on the basis of the probability of an object.
+
+Why is it called Naïve Bayes?
+	The Naïve Bayes algorithm is comprised of two words Naïve and Bayes, Which can be described as:
+1)Naïve: 
+	It is called Naïve because it assumes that the occurrence of a certain feature is independent of the occurrence of other features. Such as if the fruit is identified on the bases of color, shape, and taste, then red, spherical, and sweet fruit is recognized as an apple. Hence each feature individually contributes to identify that it is an apple without depending on each other.
+
+2)Bayes: 
+	It is called Bayes because it depends on the principle of Bayes' Theorem.
+
+							Working of Naïve Bayes' Classifier:-
+	Suppose we have a dataset of weather conditions and corresponding target variable "Play". So using this dataset we need to decide that whether we should play or not on a particular day according to the weather conditions. So to solve this problem,
+ 
+we need to follow the below steps:-
+Step1:-Convert the given dataset into frequency tables.
+Step2:-Generate Likelihood table by finding the probabilities of given features.
+Step3:-Now, use Bayes theorem to calculate the posterior probability.
+
+Problem:- If the weather is sunny, then the Player should play or not?
+Solution: To solve this, first consider the below dataset:
+
+       Outlook		Play
+0	Rainy		Yes
+1	Sunny		Yes
+2	Overcast	Yes
+3	Overcast	Yes
+4	Sunny		No
+5	Rainy		Yes
+6	Sunny		Yes
+7	Overcast	Yes
+8	Rainy		No
+9	Sunny		No
+10	Sunny		Yes
+11	Rainy		No
+12	Overcast	Yes
+13	Overcast	Yes
+
+Step1:-
+Frequency table for the Weather Conditions:
+
+Weather		Yes	No
+Overcast	5	0
+Rainy		2	2
+Sunny		3	2
+Total		10	5
+
+Step2:-
+Likelihood table weather condition:
+
+Weather		No		Yes	
+Overcast	0		5		5/14= 0.35
+Rainy		2		2		4/14=0.29
+Sunny		2		3		5/14=0.35
+All		4/14=0.29	10/14=0.71
+
+Step3:-	
+Applying Bayes'theorem:-
+
+1)P(Yes|Sunny)= P(Sunny|Yes)*P(Yes)/P(Sunny)     
+Here P(Yes|Sunny),means Yes is Hypothesis we need to find true or false & Sunny is Certinity and it's given to find. 
+
+P(Sunny|Yes)= 3/10= 0.3<-----Likelihood
+
+P(Sunny)= 0.35<--------marginal probability, pure probability of an evidence.
+
+P(Yes)=0.71<-----------prior probability, probability of hypothesis(bcz it's uncertinity we don't  know surely.'. It exists Hypothesis) before considering the evidence
+
+So P(Yes|Sunny) = 0.3*0.71/0.35= 0.60
+
+2)P(No|Sunny)= P(Sunny|No)*P(No)/P(Sunny)
+
+P(Sunny|NO)= 2/4=0.5
+
+P(No)= 0.29
+
+P(Sunny)= 0.35
+
+So P(No|Sunny)= 0.5*0.29/0.35 = 0.41
+
+So as we can see from the above calculation that P(Yes|Sunny)>P(No|Sunny)
+Hence on a Sunny day, Player can play the game.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
